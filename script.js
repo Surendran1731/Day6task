@@ -25,5 +25,7 @@ let total=result.reduce((acc,cv)=>acc+cv.population,0)
 console.log("Total Population   "+total);
 
 //e.Print the country that uses US dollars as currency.
- 
+const countryDollar = result.filter((item) => item?.currencies?.USD).map((value) => value.name);
+    console.table(countryDollar);
+
 };
